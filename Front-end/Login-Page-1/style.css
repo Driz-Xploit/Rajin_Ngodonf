@@ -22,6 +22,9 @@ input[type="submit"] {
 }
 .Creator {
     font-size: 30px;
+    border-bottom: solid gray 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
 }
 body {
     margin-top: 5%;
