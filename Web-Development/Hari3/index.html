@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/favicon.ico">
+        <title>Projek Hari ke 3 ᓀ‸ᓂ</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="box">
+                <div id="requests">
+                    <abbr class="title" title="Menerima input dan merubahnya menjadi tabel data..."><b>Tabel Identitas</b></abbr>
+                    <p>Silahkan masukkan datamu</p>
+                    <!-- <Learning_Zone> -->
+                    <div class="form-group">
+                        <form id="data">
+                            <input type="text" id="nama" placeholder=" Namamu..." required><br>
+                            <input type="number" id="umur" placeholder=" Umurmu..." required><br>
+                            <input type="text" placeholder="Tanggal Lahirmu..." id="lahir" onfocus="this.type='date'" onblur="this.type='text';if (this.value !== '') { this.placeholder=this.value } else {this.placeholder='Tanggal Lahirmu...'}" required><br>
+                            <input type="radio" name="kelamin" value="Laki-Laki" class="kelamin" id="Laki" checked>
+                            <span onclick="document.getElementById('Laki').checked = !(document.getElementById('Laki').checked)">Laki-Laki</span>
+                            <input type="radio" name="kelamin" value="Perempuan" class="kelamin" id="Pr">
+                            <span onclick="document.getElementById('Pr').checked = !(document.getElementById('Pr').checked)">Perempuan</span>
+                         </form>
+                    </div>
+                    <!-- </Learning_Zone> -->
+                    <button onclick="showRespones()" class="req-button">Kirim</button><br>
+                    <h3 id="messages" style="display: none;">A</h3>
+                </div>
+                <div id="respones" style="display: none;">
+                    <button onclick="showRequests()" class="back-button"><</button>
+                    <div id="results"></div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
