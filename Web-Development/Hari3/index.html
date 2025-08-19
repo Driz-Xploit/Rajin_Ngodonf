@@ -4,7 +4,7 @@
         <meta name="charset" content="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="img/favicon.ico">
+        <link rel="icon" href="img/icon1.ico">
         <title>Projek Hari ke 3 ᓀ‸ᓂ</title>
     </head>
     <body>
@@ -27,11 +27,33 @@
                     </div>
                     <!-- </Learning_Zone> -->
                     <button onclick="showRespones()" class="req-button">Kirim</button><br>
-                    <h3 id="messages" style="display: none;">A</h3>
+                    <h3 id="messages" style="display: none;"></h3>
                 </div>
                 <div id="respones" style="display: none;">
                     <button onclick="showRequests()" class="back-button"><</button>
-                    <div id="results"></div>
+                    <table>
+                        <tr>
+                            <td rowspan="5" style='border-radius: 10px 0 0 10px; text-align: center;'>
+                                <img src="" alt="Gender Icon" id="gender-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Nama</th>
+                            <td id="text-name" style='border-radius: 0 10px 0 0;'></td>
+                        </tr>
+                        <tr>
+                            <th>Umur</th>
+                            <td id="text-age"></td>
+                        </tr>
+                        <tr>
+                            <th>Lahir</th>
+                            <td id="text-date"></td>
+                        </tr>
+                        <tr>
+                            <th>Kelamin</th>
+                            <td id="text-gender" style='border-radius: 0 0 10px 0;'></td>
+                        </tr>       
+                    </table>
                 </div>
             </div>
         </div>

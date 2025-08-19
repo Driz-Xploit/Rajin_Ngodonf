@@ -1,5 +1,14 @@
-function makeTable (name, age, date, gender) {
-    return "<table><tr><th style='border-top-left-radius: 10px;'>Nama</th><td style='border-top-right-radius: 10px;'>"+name+"</td></tr><tr><th>Umur</th><td>"+age+"</td></tr><tr><th>Lahir</th><td>"+date+"</td></tr><tr><th style='border-bottom-left-radius: 10px;'>Kelamin</th><td style='border-bottom-right-radius: 10px;'>"+gender+"</td></tr></table>"
+function makeTable(name, age, date, gender) {
+    document.getElementById("text-name").innerHTML = name
+    document.getElementById("text-age").innerHTML = age
+    document.getElementById("text-date").innerHTML = date
+    document.getElementById("text-gender").innerHTML = gender
+    let gender_icon = document.getElementById("gender-icon")
+    if (gender === "Laki-Laki") {
+        gender_icon.src = "img/icon2.png"
+    } else if (gender === "Perempuan") {
+        gender_icon.src = "img/icon1.ico"
+    }
 }
 function messages(info) {
     message = document.getElementById("messages")
@@ -24,7 +33,7 @@ function showRespones() {
                             box.style = "width: 650px;"
                             requests.style = "display: none;"
                             respones.style = "display: contents;"
-                            document.getElementById("results").innerHTML = makeTable(nama, umur, lahir, kelamin)
+                            makeTable(nama, umur, lahir, kelamin)
                         } else {
                             messages("Kelamin")
                         }

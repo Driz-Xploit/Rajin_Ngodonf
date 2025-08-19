@@ -57,35 +57,47 @@ span {
 }
 /* </Learning_Zone> */
 th {
-    background-color: cyan;
+    text-align: left;
+    padding: 1px 5px;
+    background-color: rgba(194, 255, 220, 0.855);
+}
+td {
+    text-align: left;
+    width: 50%;
 }
 tr, td, th {
-    padding: 0 10px;
-    text-align: left;
     border: solid 1px black;
     border-collapse: collapse;
 }
 table {
+    margin: 0 10px;
     border-spacing: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 @media (min-width: 721px) {
     .box {
         margin-top: 2%;
         background-color: white;
-        width: 500px;
+        width: 700px;
     }
     #lahir {
         padding: 0 8%;
     }
     table {
-        font-size: 30px;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    #gender-icon {
+        width: 70%;
+        height: 70%;
     }
 }
 @media (max-width: 720px) {
     table {
+        margin-top: 10px;
         font-size: 20px;
     }
     .box {
@@ -95,5 +107,9 @@ table {
     }
     #lahir {
         padding: 0 14%;
+    }
+    #gender-icon {
+        width: 75%;
+        height: 75%;
     }
 }
