@@ -5,6 +5,9 @@
 body {
 	background-image: linear-gradient(rgb(233, 229, 229));
 }
+body::-webkit-scrollbar {
+	display: none; /* Membuat Scrollbar di kiri hilang*/
+}
 .container {
 	display: flex;
 	justify-content: center;
@@ -29,11 +32,16 @@ body {
 	text-align: center;
 }
 a {
-	margin: 80vh 0 0 0;
 	text-decoration: none;
 	color: black;
+}
+.box-form a {
+	margin-left: 15px;
+	color: rgb(55, 0, 128);
+}
+.menu a {
+	margin: 80vh 0 0 0;
 	font-size: 20px;
-	user-select: none;
 }
 .menu a:hover {
 	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
@@ -66,11 +74,14 @@ input[type='submit'] {
 	border: none;
 	background-image: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 255, 255, 0.8));
 }
+.box-form img {
+	border-radius: 5px;
+}
 @media (max-width: 720px) {
 	.box-img {
 		display: none;
 	}
 	.box-form {
-		height: 60vh;
+		height: 80vh;
 	}
 }
