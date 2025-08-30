@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driz Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box-img">
+            <div class="menu">
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Term of use</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="box-form">
+            <form action="result.html">
+                <h1>Log in</h1>
+                <p>@ Rajin Ngodonf 2025</p>
+                <input type="email" name="email" placeholder="Email..." required><br>
+                <input type="password" name="password" placeholder="Password..." id="pwd" required><img style="transform: translate(-120%, 30%);" src="hide.png" alt="hide/show" height="25" width="25" onclick="if (document.getElementById('pwd').type == 'password') {this.src='show.jpg' ; document.getElementById('pwd').type = 'text'} else {this.src='hide.png' ; document.getElementById('pwd').type = 'password'}"><br>
+                <input type="radio" name="remember" value="True" id="remember" onclick="if (this.type === 'radio') {this.type='checkbox'} else {this.type='radio'} "><label for="remember">Remember me</label><br>
+                <input type="submit"><br><br>
+                <a href="#">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

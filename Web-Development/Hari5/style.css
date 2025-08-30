@@ -1,0 +1,76 @@
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	user-select: none;
+}
+body {
+	background-image: linear-gradient(rgb(233, 229, 229));
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box-form, .box-img {
+	margin: 4vh 0;
+	width: 80vh;
+	height: 90vh;
+}
+.box-img {
+	background-image: url("banner.png");
+	background-repeat: 0;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5), -2px -2px 2px rgba(0, 0, 0, 0.5);
+}
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+}
+a {
+	margin: 80vh 0 0 0;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	user-select: none;
+}
+.menu a:hover {
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+	color: rgba(0, 166, 255, 0.6);
+	padding-bottom: 10px;
+	border-bottom: solid 1px black;
+}
+.box-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: azure;
+	box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+input[type='email'], input[type='password'], input[type='text'] {
+	outline: none;
+	border: none;
+	background-color: azure;
+	font-size: 20px;
+	border-bottom: solid 1px grey;
+	padding-bottom: 10px;
+	margin: 10px 0;
+}
+input[type='submit'] {
+	margin-top: 20px;
+	padding: 0 100px;
+	font-size: 25px;
+	border-radius: 20px;
+	border: none;
+	background-image: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(0, 255, 255, 0.8));
+}
+@media (max-width: 720px) {
+	.box-img {
+		display: none;
+	}
+	.box-form {
+		height: 60vh;
+	}
+}
