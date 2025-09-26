@@ -11,29 +11,37 @@
         <div class="container">
             <div class="box" id="box">
                 <div id="requests">
-                    <abbr class="title" title="Menerima input dan merubahnya menjadi tabel data..."><b>Tabel Identitas</b></abbr>
+                    <abbr class="title" title="Menerima input dan merubahnya menjadi tabel data..."><b>Form Identitas</b></abbr>
                     <p>Silahkan masukkan datamu</p>
                     <!-- <Learning_Zone> -->
                     <div class="form-group">
                         <form id="data">
-                            <input type="text" id="nama" placeholder=" Namamu..." required><br>
-                            <input type="number" id="umur" placeholder=" Umurmu..." required><br>
-                            <input type="text" placeholder="Tanggal Lahirmu..." id="lahir" onfocus="this.type='date'" onblur="this.type='text';if (this.value !== '') { this.placeholder=this.value } else {this.placeholder='Tanggal Lahirmu...'}" required><br>
-                            <input type="radio" name="kelamin" value="Laki-Laki" class="kelamin" id="Laki" checked>
-                            <span onclick="document.getElementById('Laki').checked = !(document.getElementById('Laki').checked)">Laki-Laki</span>
-                            <input type="radio" name="kelamin" value="Perempuan" class="kelamin" id="Pr">
-                            <span onclick="document.getElementById('Pr').checked = !(document.getElementById('Pr').checked)">Perempuan</span>
+                            <input type="text" id="nama" placeholder=" Namamu..." required>
+                            <br>
+                            <input type="number" id="umur" placeholder=" Umurmu..." required>
+                            <br>
+                            <input type="text" placeholder="Tanggal Lahirmu..." id="lahir" onfocus="this.type='date'" onblur="this.type='text';if (this.value !== '') { this.placeholder=this.value } else {this.placeholder='Tanggal Lahirmu...'}" required>
+                            <br>
+                            <input type="radio" name="kewarganegaraan" value="WNI" class="radio" id="WNI" checked>
+                            <span onclick="if (!document.getElementById('WNI').checked) { document.getElementById('WNI').checked = true}">WNI</span>
+                            <input type="radio" name="kewarganegaraan" value="WANA" class="radio" id="WANA">
+                            <span onclick="if (!document.getElementById('WANA').checked) { document.getElementById('WANA').checked = true}">WANA</span>
+                            <br>
+                            <input type="radio" name="kelamin" value="Laki-Laki" class="radio" id="Laki" checked>
+                            <span onclick="if (!document.getElementById('Laki').checked) { document.getElementById('Laki').checked = true}">Laki-Laki</span>
+                            <input type="radio" name="kelamin" value="Perempuan" class="radio" id="Pr">
+                            <span onclick="if (!document.getElementById('Pr').checked) { document.getElementById('Pr').checked = true}">Perempuan</span>
                          </form>
+                         <button onclick="showRespones()" class="req-button">Kirim</button><br>
                     </div>
                     <!-- </Learning_Zone> -->
-                    <button onclick="showRespones()" class="req-button">Kirim</button><br>
                     <h3 id="messages" style="display: none;"></h3>
                 </div>
                 <div id="respones" style="display: none;">
                     <button onclick="showRequests()" class="back-button"><</button>
                     <table>
                         <tr>
-                            <td rowspan="5" style='border-radius: 10px 0 0 10px; text-align: center;'>
+                            <td rowspan="6" style='border-radius: 10px 0 0 10px; text-align: center;'>
                                 <img src="" alt="Gender Icon" id="gender-icon">
                             </td>
                         </tr>
@@ -48,6 +56,10 @@
                         <tr>
                             <th>Lahir</th>
                             <td id="text-date"></td>
+                        </tr>
+                        <tr>
+                            <th>Warga</th>
+                            <td id="text-warga"></td>
                         </tr>
                         <tr>
                             <th>Kelamin</th>

@@ -1,18 +1,19 @@
-function makeTable(name, age, date, gender) {
-    document.getElementById("text-name").innerHTML = name
-    document.getElementById("text-age").innerHTML = age
-    document.getElementById("text-date").innerHTML = date
-    document.getElementById("text-gender").innerHTML = gender
+function makeTable(name, age, date, gender, citizen) {
+    document.getElementById("text-name").textContent = name
+    document.getElementById("text-age").textContent = age
+    document.getElementById("text-date").textContent = date
+    document.getElementById("text-gender").textContent = gender
+    document.getElementById("text-warga").textContent = citizen
     let gender_icon = document.getElementById("gender-icon")
     if (gender === "Laki-Laki") {
         gender_icon.src = "img/icon2.png"
     } else if (gender === "Perempuan") {
-        gender_icon.src = "img/icon1.ico"
+        gender_icon.src = "img/icon1.png"
     }
 }
 function messages(info) {
     message = document.getElementById("messages")
-    message.innerHTML = "*Belum ke isi: "+info+"*"
+    message.textContent = "*Belum ke isi: "+info+"*"
     message.style = "display: contents;"
 }
 function showRespones() {
@@ -21,11 +22,13 @@ function showRespones() {
     lahir = document.getElementById('lahir').value
     // <Learning_Zone>
     kelamin = document.querySelector('input[name="kelamin"]:checked').value;
+    warga = document.querySelector('input[name="kewarganegaraan"]:checked').value;
     // </Learning_Zone>
     if (nama) {
         if (umur) {
             if (lahir) {
                         if (kelamin) {
+                            if (warga) {
                             document.getElementById("messages").style = "display: none";
                             let requests = document.getElementById("requests")
                             let respones = document.getElementById("respones")
@@ -33,7 +36,10 @@ function showRespones() {
                             box.style = "width: 650px;"
                             requests.style = "display: none;"
                             respones.style = "display: contents;"
-                            makeTable(nama, umur, lahir, kelamin)
+                            makeTable(nama, umur, lahir, kelamin, warga)
+                            } else {
+                                messages("WNI/WANA")
+                            }
                         } else {
                             messages("Kelamin")
                         }
@@ -55,7 +61,7 @@ function showRequests() {
     let requests = document.getElementById("requests")
     let respones = document.getElementById("respones")
     let box = document.getElementById("box")
-    box.style = "width: 500px;"
+    box.style = "width: 400px;"
     respones.style = "display: none;"
     requests.style = "display: contents;"
 }

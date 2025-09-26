@@ -11,13 +11,13 @@ body {
 }
 .box {
     border-radius: 10px;
-    height: 400px;
+    height: 450px;
 }
 .back-button {
     display: flex;
     justify-content: left;
-    border-radius: 5px;
-    border: solid 1px rgba(128, 128, 128, 0.649);
+    border-radius: 10px;
+    border: none;
     background-color: white;
     font-size: 30px;
     width: 33px;
@@ -28,7 +28,7 @@ body {
     padding: 0 70px;
     border-radius: 20px;
     border: none;
-    margin-bottom: 8px;
+    margin: 10px 0 10px 0;
 }
 .title {
     border-bottom: solid black 2px;
@@ -44,6 +44,9 @@ input {
     border: none;
     border-bottom: solid 1px black;
     padding-bottom: 10px;
+}
+#lahir {
+    height: 20px;
 }
 .form-group {
     margin: 40px 0 20px 0;
@@ -64,19 +67,22 @@ th {
 td {
     text-align: left;
     width: 50%;
+    padding: 1px 5px;
 }
 tr, td, th {
     border: solid 1px black;
     border-collapse: collapse;
 }
 table {
-    margin: 0 10px;
+    margin: 20px 50px;
     border-spacing: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+#gender-icon {
+    border-radius: 10px;
+}
 @media (min-width: 721px) {
     .box {
         margin-top: 2%;
@@ -87,18 +93,16 @@ table {
         padding: 0 8%;
     }
     table {
-        margin-top: 10px;
         font-size: 40px;
     }
     #gender-icon {
-        width: 70%;
-        height: 70%;
+        width: 90%;
+        height: 90%;
     }
 }
 @media (max-width: 720px) {
     table {
-        margin-top: 10px;
-        font-size: 20px;
+        font-size: 15px;
     }
     .box {
         margin-top: 2%;
@@ -109,7 +113,7 @@ table {
         padding: 0 14%;
     }
     #gender-icon {
-        width: 75%;
-        height: 75%;
+        width: 100%;
+        height: 90%;
     }
 }
