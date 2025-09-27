@@ -1,0 +1,107 @@
+* {
+    user-select: none;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.95);
+    font-family: 'Poppins';
+    height: 100vh;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 5px;
+}
+.search * {
+    font-size: 15px;
+}
+.search input:focus {
+    outline: solid 2px rgba(255, 255, 255, 0.6);
+    outline-offset: -3px;
+}
+.search input {
+    outline: solid 2px rgba(255, 255, 255, 0.2);
+    outline-offset: -3px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 30%;
+    padding: 5px;
+    height: 3vh;
+}
+header h1 {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+    padding-bottom: 25px;
+}
+.search button {
+    background-color: rgba(240, 248, 255);
+    padding: 0 10px;
+    height: 5vh;
+}
+.cancel {
+    border-radius: 15px 0 0 15px;
+}
+.search_button {
+    border-radius: 0 15px 15px 0;
+}
+.videos iframe, .videos video {
+    margin: 0;
+    border-radius: 12px;
+    outline: solid 1px rgba(255, 255, 255, 0.2);
+    width: 90%;
+    height: 90%;
+}
+.videos {
+    border-radius: 15px;
+    margin: 20px 30px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.desc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    width: 25%;
+    outline: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    height: 70%;
+}
+aside {
+    display: flex;
+    justify-content: center;
+    margin-top: 28vh;
+}
+.harukachibi {
+    width: 80vh;
+    height: 30vh;
+}
+.content {
+    display: flex;
+}
+main, footer {
+    width: 20em;
+    outline: solid 2px rgba(255, 255, 255, 0.3);
+    outline-offset: 0.5em;
+    border-radius: 12px;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+}
+footer {
+    margin-top: 2em;
+}
+.foo {
+    margin-left: 2em;
+}
+.bar {
+    text-align: left;
+    margin-left: 50px;
+}
