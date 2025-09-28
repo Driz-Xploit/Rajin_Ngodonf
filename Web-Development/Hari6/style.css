@@ -1,4 +1,4 @@
-* {
+#body {
     user-select: none;
 }
 body {
@@ -9,20 +9,20 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
-.search {
+.head {
     display: flex;
     justify-content: center;
     position: sticky;
-    top: 5px;
+    top: 3%;
 }
-.search * {
+.head * {
     font-size: 15px;
 }
-.search input:focus {
+.head input:focus {
     outline: solid 2px rgba(255, 255, 255, 0.6);
     outline-offset: -3px;
 }
-.search input {
+.head input {
     outline: solid 2px rgba(255, 255, 255, 0.2);
     outline-offset: -3px;
     color: white;
@@ -35,7 +35,7 @@ header h1 {
     border-bottom: solid 1px rgba(255, 255, 255, 0.4);
     padding-bottom: 25px;
 }
-.search button {
+.head button {
     background-color: rgba(240, 248, 255);
     padding: 0 10px;
     height: 5vh;
@@ -63,25 +63,43 @@ header h1 {
     align-items: center;
     text-align: center;
 }
-.desc {
+.desc, .desc2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: white;
-    text-align: center;
-    width: 25%;
     outline: solid 1px rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     height: 70%;
 }
-aside {
+.desc {
+    width: 25%;
+    text-align: center;
+}
+.container2 {
     display: flex;
     justify-content: center;
-    margin-top: 28vh;
+    align-items: center;
+    flex-direction: column;
+}
+.desc2 {
+    width: 50%;
+    padding: 20px;
+    margin-top: 5%;
+    text-align: justify;
+}
+.bawah {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
 }
 .harukachibi {
     width: 80vh;
     height: 30vh;
+}
+a {
+    text-decoration: none;
+    color: blue;
 }
 .content {
     display: flex;

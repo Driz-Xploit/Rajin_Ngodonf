@@ -1,7 +1,7 @@
 getSrc('test.mp4', 'video')
 function whenError(args) {
     let video = document.getElementById("videos")
-    video.innerHTML = "<h1 style='color: white;'>Something Error!: " + args + "<br>Please read <a href='help.html'>Guide</a> first</h1>"
+    video.innerHTML = "<h1 style='color: white;'>Something Error!: " + args + "<br>Please read the <a href='help.html'>Guide</a> first</h1>"
     video.style = "outline: solid 1px rgba(255, 255, 255, 0.2);"
 }
 // <Learning Area>
@@ -46,10 +46,10 @@ function getSrc(temp_src, typeFrom="") {
                 return
             }
             video.innerHTML = `<iframe frameborder="0" src="https://youtube.com/embed/${src}" id="myIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" referrer-policy="no-referrer" allowfullscreen></iframe>`
+        }
         video.style = 'outline: none;'
     } else {
         whenError("Your Input pls...")
     }
-}
 }
 // <Learning Area>

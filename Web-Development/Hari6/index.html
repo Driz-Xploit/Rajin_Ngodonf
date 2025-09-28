@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 <body id="body">
-    <div class="search">
+    <div class="head">
         <button onclick="document.getElementById('searchs').value = ''" class="cancel"><img src="img/cancel.png" alt="cancel" width="20" height="20"></button>
         <input type="text" class="search-input" id="searchs" placeholder="Cari Video..." aria-label="Kolom pencarian" autofocus>
         <button onclick="getSrc(document.getElementById('searchs').value)" class="search_button"><img src="img/search_image.svg" alt="search_image" width="20" height="20"></button>
@@ -26,6 +26,7 @@
                     <div class="foo"><input type="radio" name="jenis" value="iframe" id="yt" checked><br><input type="radio" name="jenis" value="video" id="video"></div>
                     <div class="bar"><label for="yt" onclick="if (! document.getElementById('yt').checked) { document.getElementById('yt').checked = true}">Youtube embed (Id)</label><br><label for="video" onclick="if (! document.getElementById('video').checked) { document.getElementById('video').checked = true}">Local Video (Filename)</label></div>
                 </main>
+                <footer style="display: flex; justify-content: center;"><a href="help.html" target="_blank">YTStream Guide</a></footer>
                 <footer>
                     <em>~ Rajin Ngodonf</em>
                 </footer>
