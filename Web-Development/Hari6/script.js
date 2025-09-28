@@ -35,16 +35,21 @@ function getSrc(temp_src, typeFrom="") {
             video.innerHTML =
             '<video controls src="' + temp_src + '" id="myVideo" loop></video>';
         } else if (typeFrom === "iframe") {
-            if (temp_src.length == 11) {
-                video.innerHTML = `<iframe frameborder="0" src="https://youtube.com/embed/${temp_src}?autoplay=1&loop=1&playlist=${temp_src}" id="myIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrer-policy="no-referrer" allowfullscreen></iframe>`;
+            let src;
+            temp_src = temp_src.split('&')
+            if (temp_src.length === 2 && temp_src[0].length === 11 && temp_src[1].length === 13) {
+                src = `${temp_src[0]}?autoplay=1&list=${temp_src[1]}`
+            } else if (temp_src[0].length == 11) {
+                src = `${temp_src[0]}?autoplay=1&loop=1&playlist=${temp_src[0]}`
             } else {
                 whenError("Input Id embed tidak valid")
                 return
             }
-        }
+            video.innerHTML = `<iframe frameborder="0" src="https://youtube.com/embed/${src}" id="myIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" referrer-policy="no-referrer" allowfullscreen></iframe>`
         video.style = 'outline: none;'
     } else {
         whenError("Your Input pls...")
     }
+}
 }
 // <Learning Area>
