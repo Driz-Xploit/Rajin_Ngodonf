@@ -11,7 +11,7 @@ class Tugas {
 		clear();
 	}
 	public static string asc(List<int> lists) {
-		List<int> temp = lists;
+		List<int> temp = new List<int>(lists);
 		bool loop = true;
 		while (loop) {
 			for (int i = 0; i < temp.Count(); i++)
@@ -29,7 +29,7 @@ class Tugas {
 		return list_format(temp);
 	}
 	public static string desc(List<int> lists) {
-		List<int> temp = lists;
+		List<int> temp = new List<int>(lists);
 		bool loop = true;
 		while (loop) {
 			for (int i = 0; i < temp.Count(); i++)
