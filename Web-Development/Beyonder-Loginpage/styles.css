@@ -1,0 +1,110 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.box{
+    background-color:white;
+    width: auto;
+    min-height: 50vh;
+    padding: 30px;
+    border-radius: 20px;
+    color: #282828;
+    font-family: bahnschrift; 
+    margin: 4vh 0;
+ }
+
+.herta{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+.enter{
+    color: grey;
+    font-size: small;
+    margin-top: -7%;
+    text-align: center;
+}
+.welcome {
+    color: #292929;
+    text-align: center;
+    margin-top: -10px;
+}
+
+input {
+    border: solid #e4e4e4;
+    background: rgb(255, 255, 255);
+    border-radius:10px;
+    padding:5px 15px ;
+    width: 270px;
+    outline: none;
+}
+input[type="text"]:focus{
+    border-color: #4D55CC;
+    box-shadow: 0 0 8px;
+}
+
+input[type="password"]:focus{
+    border-color: #4D55CC;
+    box-shadow: 0 0 5px #4D55CC;
+}
+
+input[type="submit"] {
+background-color:#4D55CC;
+padding:5px 15px;
+opacity: 80%;
+border-radius: 10px;
+border: none;
+color: white;
+width: 300px;
+margin-top: 10px;
+}
+input[type="checkbox"]{
+    width: 10px;
+    vertical-align:-3px;
+    margin-right: -1px;
+}
+#label30 {  
+    font-size: 12px;
+    color:grey;
+}
+
+.bawahan{
+    margin-top:12px;
+}
+
+.forgot{
+    font-size: 12px;
+    margin-left: 45px;
+    vertical-align:;
+    font-weight: bold;
+    color: #4D55CC;
+    text-decoration: none;
+}
+.sign{
+    font-size: small;
+}
+.linksign{
+    font-weight: bold;
+    color: #4D55CC;
+    text-decoration: none;
+}
+a:hover{
+    color: #211C84;
+}
+.watermark{
+    color: grey;
+    margin-bottom: 1px;
+    margin-left:-8px;
+    font-size: 12px;
+}
+
+body{
+background-color: #211C84;
+}
