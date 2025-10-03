@@ -68,19 +68,46 @@ class Tugas {
 			wait();
 		}
 	}
-	public static void Ubah(List<int> lists) {
+	public static void Hapus(List<int> lists)
+	{
+		clear();
+		int opsiHapus;
+		while (true)
+		{
+			print_lists(lists);
+			Console.Write("Pilih salah satu: ");
+			opsiHapus = Convert.ToInt32(Console.ReadLine());
+			if (opsiHapus > 0 && opsiHapus <= lists.Count())
+			{
+				lists.Remove(lists[opsiHapus-1]);
+				Console.WriteLine("Berhasil!");
+				break;
+			}
+			else
+			{
+				Console.WriteLine("\nTidak Valid!");
+			}
+			wait();
+		}
+	}
+	public static void Ubah(List<int> lists)
+	{
 		clear();
 		int opsiUbah;
-		while (true) {
+		while (true)
+		{
 			print_lists(lists);
 			Console.Write("Pilih salah satu: ");
 			opsiUbah = Convert.ToInt32(Console.ReadLine());
-			if (opsiUbah > 0 && opsiUbah <= lists.Count()) {
+			if (opsiUbah > 0 && opsiUbah <= lists.Count())
+			{
 				Console.Write("Ubah dengan apa?: ");
 				lists[opsiUbah - 1] = Convert.ToInt32(Console.ReadLine());
 				Console.WriteLine("Berhasil!");
 				break;
-			} else {
+			}
+			else
+			{
 				Console.WriteLine("\nTidak Valid!");
 			}
 			wait();
@@ -91,7 +118,7 @@ class Tugas {
 		List<int> Main_Lists = new List<int> {2, 4, 3, 5, 1};
 		int opsi;
 		while (true) {
-			Console.WriteLine("~~~ Array Manipulation ~~~\nBy Shou Driz\n\n1. Tampilkan Data Awal\n2. Tampilkan Hasil Ascending Sorting\n3. Tampilkan Hasil Descending Sorting\n4. Rata-Rata\n5. Tampilkan Minimal\n6. Tampilkan Maximum\n7. Ubah Data\n8. Tambahkan Data\n9. EXIT");
+			Console.WriteLine("~~~ Array Manipulation ~~~\nBy Shou Driz\n\n1. Tampilkan Data Awal\n2. Tampilkan Hasil Ascending Sorting\n3. Tampilkan Hasil Descending Sorting\n4. Rata-Rata\n5. Tampilkan Minimal\n6. Tampilkan Maximum\n7. Ubah Data\n8. Tambahkan Data\n9. Hapus Data\n10. EXIT");
 			Console.Write("Opsi: ");
 			opsi = Convert.ToInt32(Console.ReadLine());
 			Console.WriteLine();
@@ -122,6 +149,9 @@ class Tugas {
 					Tambah(Main_Lists);
 					break;
 				case 9:
+					Hapus(Main_Lists);
+					break;
+				case 10:
 					Environment.Exit(0);
 					break;
 				default:
