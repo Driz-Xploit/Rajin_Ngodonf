@@ -11,8 +11,8 @@ def kembalikan():
         tgl = int(input("Tanggal berapa di kembalikan?: "))
         if tgl >= hari_ini:
             if tgl > (hari_ini + 14):
-                denda = (tgl - 14) * 1000
-                print(f"Kamu tidak mengumpulkan buku selama {tgl - 14} hari!\n"+"Denda: Rp {:,}".format(denda))
+                denda = (tgl - 14 - hari_ini) * 1000
+                print(f"Kamu tidak mengumpulkan buku selama {tgl - 14 - hari_ini} hari!\n"+"Denda: Rp {:,}".format(denda))
             else:
                 print("Arigatou, sudah mengumpulkan tepat waktu")
             for i in list(dict_dipinjam.keys()):
