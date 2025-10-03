@@ -13,6 +13,10 @@
 
 * Github: [@Driz-Xploit](https://github.com/Driz-Xploit)
 
+👤 **Bian-Beyonder**
+
+* Github: [@Bian-Beyonder](https://github.com/Bian-Beyonder)
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
