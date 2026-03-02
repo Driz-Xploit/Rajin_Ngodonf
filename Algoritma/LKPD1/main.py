@@ -1,13 +1,10 @@
-from sys import exit
-from os import system as cmd, name as your_os
-clear = lambda: cmd("cls" if your_os == 'nt' else 'clear')
 def wait():
     print("\n(PRESS FOR CONTINUE)", end='')
     input()
 def kembalikan():
     if list(dict_dipinjam.keys()):
         for i, x in enumerate(list(dict_dipinjam.keys())):
-            print(f"{i+1}. {x.capitalize()} -> {dict_dipinjam[x]} buku")
+            print(f"{i+1}. {' '.join([text.capitalize() for text in x.split()])} -> {dict_dipinjam[x]} buku")
         tgl = int(input("Tanggal berapa di kembalikan?: "))
         if tgl >= hari_ini:
             if tgl > (hari_ini + 14):
@@ -27,7 +24,7 @@ def pinjam():
         return print("Maaf, tidak ada buku tersedia. tolong isi di Tambah Buku...")
     lihat()
     buku_pinjam = int(input(f"\npilih salah satu: ")) - 1
-    if buku_pinjam > len(buku_keys) or buku_pinjam < 0:
+    if buku_pinjam >= len(buku_keys) or buku_pinjam < 0:
         return print(f"Maaf, tapi input tidak valid")
     stok_pinjam = int(input(f"Mau pinjam berapa untuk {buku_keys[buku_pinjam].capitalize()}?: "))
     if stok_pinjam > 0:
@@ -40,18 +37,19 @@ def pinjam():
     else:
         print("Maaf tapi input tidak valid")
 def tambah():
-    buku = input("Nama buku: ").lower()
-    if buku in list(dict_buku.keys()):
-        return print(f"Maaf, Buku '{buku.capitalize()}' sudah ada di daftar...\nAda {dict_buku[buku]} buku")
+    buku = input("Nama buku: ").lower().strip()
     stok = int(input("Stok: "))
-    if stok > 0:
+    if stok > 0 and buku and ''.join(buku.split()).isalnum():
+        if buku in list(dict_buku.keys()):
+            dict_buku[buku.lower()] += stok
+            return
         dict_buku[buku.lower()] = stok
     else:
         print("Input stok tidak valid")
 def lihat():
     if len(list(dict_buku.keys())):
         for i, x in enumerate(list(dict_buku.keys())):
-            print(f"{i+1}. {x.capitalize()} -> {dict_buku[x]} buku")
+            print(f"{i+1}. {' '.join([text.capitalize() for text in x.split()])} -> {dict_buku[x]} buku")
     else:
         return print("Maaf, tidak ada buku tersedia. tolong isi di Tambah Buku...")
 def menu():
@@ -81,5 +79,8 @@ def menu():
             print("\nbye...")
             exit()
 if __name__ == '__main__':
+    from sys import exit
+    from os import system as cmd, name as your_os
+    clear = lambda: cmd("cls" if your_os == 'nt' else 'clear')
     clear()
     menu()
